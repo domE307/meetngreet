@@ -11,7 +11,7 @@ const items = [
 
 export function FloatingFood() {
   return (
-    <div aria-hidden className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
+    <div aria-hidden className="pointer-events-none fixed inset-0 -z-10 hidden md:block overflow-hidden">
       {items.map(({ emoji, left, top, size, delay }) => (
         <span
           key={emoji}

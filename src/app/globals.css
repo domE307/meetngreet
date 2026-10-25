@@ -14,6 +14,7 @@
   --color-accent: var(--accent);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-hand: var(--font-caveat);
 }
 
 body {
@@ -93,31 +94,34 @@ body {
   animation: wiggle 0.6s ease-in-out;
 }
 
-/* Scroll-Reveal: Zustand wird per IntersectionObserver gesetzt */
-.reveal {
-  opacity: 0;
-  transform: translateY(40px) scale(0.97);
-  transition:
-    opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
-    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+@keyframes blob-drift {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(40px, 30px) scale(1.12);
+  }
 }
 
-.reveal.is-visible {
-  opacity: 1;
-  transform: none;
+.animate-blob {
+  animation: blob-drift 14s ease-in-out infinite;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
   .animate-fade-up,
   .animate-float,
   .animate-wave,
+  .animate-blob,
   .group:hover .group-hover-wiggle {
     animation: none;
-  }
-
-  .reveal {
-    opacity: 1;
-    transform: none;
-    transition: none;
   }
 }

@@ -2,6 +2,8 @@ export type Restaurant = {
   id: string;
   cuisine: string;
   emoji: string;
+  /** Akzentfarbe der Karte */
+  color: string;
   name: string;
   /** Persönlicher Kommentar zum Laden */
   comment: string;
@@ -29,6 +31,7 @@ export const restaurants: Restaurant[] = [
     id: "griechisch",
     cuisine: "Griechisch",
     emoji: "🫒",
+    color: "#2f6fb5",
     name: "Restaurant Mati",
     comment: "War ich schon öfter, hat mich nie enttäuscht.",
     dishes: ["Gyros", "Souvlaki", "Gemüse-Moussaka", "Tzatziki"],
@@ -41,6 +44,7 @@ export const restaurants: Restaurant[] = [
     id: "vietnamesisch",
     cuisine: "Vietnamesisch",
     emoji: "🍜",
+    color: "#2e7d46",
     name: "Minh Khai Falkensee",
     comment:
       "Da wollten Aileen und ich immer hin, bisher noch nicht geschafft. Gut geeignet, um tolle Bilder vom Essen in die Gruppe zu posten à la „und ihr so?!“",
@@ -54,36 +58,39 @@ export const restaurants: Restaurant[] = [
     id: "chinesisch",
     cuisine: "Chinesisch",
     emoji: "🥡",
+    color: "#b3302a",
     name: "Hong Shun",
     comment: "War immer sehr solide!",
     dishes: ["Gebratene Nudeln", "Süß-sauer", "Dim Sum", "Ente"],
     lat: 52.5703964,
     lon: 13.0942049,
     mapsUrl: "https://maps.app.goo.gl/82Qh4NkWLThpBRhQ6",
-    menuUrl: "https://www.speisekarte.de/falkensee/restaurant/china_restaurant_hong_shun/speisekarte",
+    menuUrl: "https://www.restaurant-hongshun.de/Speisen-und-Getraenk",
   },
   {
     id: "pizza",
     cuisine: "Pizza",
     emoji: "🍕",
+    color: "#c75a1a",
     name: "60 Seconds to Napoli",
     comment: "Wow, hat mich umgehauen!",
     dishes: ["Pizza Margherita", "Pizza Diavola", "Pizza al Taglio"],
     lat: 52.5090392,
     lon: 13.3905452,
     mapsUrl: "https://maps.app.goo.gl/mSVtY8CNDUn3UgGr8",
-    menuUrl: "https://www.speisekarte.de/berlin/restaurant/60_seconds_to_napoli_berlin_friedrichstrasse/speisekarte",
+    menuUrl: "https://60secondstonapoli.de/menue/",
   },
   {
     id: "sushi",
     cuisine: "Sushi",
     emoji: "🍣",
+    color: "#c0396a",
     name: "Sy Restaurant Spandau",
     comment: "Sushi geht ja eigentlich immer.",
     dishes: ["Maki", "Nigiri", "Edamame", "Miso-Suppe"],
     lat: 52.5379045,
     lon: 13.206736,
     mapsUrl: "https://maps.app.goo.gl/YeACzxbuYQ1Zd8FZ6",
-    menuUrl: "https://www.speisekarte.de/berlin/restaurant/sy_restaurant_spandau/speisekarte",
+    menuUrl: "https://sy-restaurant.de/upload/Speisekarte_Spandau_web.pdf",
   },
 ];
