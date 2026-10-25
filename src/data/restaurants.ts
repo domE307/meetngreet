@@ -81,7 +81,7 @@ export const restaurants: Restaurant[] = [
     menuUrl: "https://60secondstonapoli.de/menue/",
   },
   {
-    id: "sushi",
+    id: "sushii",
     cuisine: "Sushi",
     emoji: "🍣",
     color: "#c0396a",
